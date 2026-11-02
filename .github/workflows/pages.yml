@@ -23,6 +23,8 @@ jobs:
           node-version: '24'
       - run: npm test
       - run: npm run build
+        env:
+          BACKEND_URL: ${{ vars.BACKEND_URL }}
       - uses: actions/configure-pages@v5
         with:
           enablement: true
